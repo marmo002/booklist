@@ -1,0 +1,13 @@
+List of books Plain Text format
+
+<% @books.each do |book| %>
+  Book Title: <%= book.title %>
+  Book Author: <%= book.author %>
+<% if book.already_read? %>
+  This book has been read
+<% else %>
+  This book hasn't been read yet
+<% end %>
+
+
+<% end %>

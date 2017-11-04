@@ -1,1 +1,15 @@
-<h1>Hola a todos</h1>
+<h1>List of books HTML format</h1>
+
+<% @books.each do |book| %>
+<div>
+  <ul>
+    <li>Book Title: <%= book.title %></li>
+    <li>Book Author: <%= book.author %></li>
+      <% if book.already_read? %>
+        <li>This book has been read</li>
+      <% else %>
+        <li>This book hasn't been read yet</li>
+      <% end %>
+  </ul>
+</div>
+<% end %>
